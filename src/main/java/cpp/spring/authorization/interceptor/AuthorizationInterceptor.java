@@ -94,7 +94,7 @@ public class AuthorizationInterceptor  extends HandlerInterceptorAdapter
         if( org.springframework.util.StringUtils.isEmpty(id))
         	throw new AuthorizationException( MESSAGE_INVALID_TOKEN)   ;
         
-        if( org.springframework.util.StringUtils.isEmpty(this.request_attribute_name))	
+        if( !org.springframework.util.StringUtils.isEmpty(this.request_attribute_name))	
         	request.setAttribute( this.request_attribute_name, id);
 	        
         
